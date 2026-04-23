@@ -1,0 +1,9 @@
+services:
+  opf:
+    image: gh0stkey/opf-privacy-filter:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - OPF_DEVICE=cpu
+      - OPF_OUTPUT_MODE=typed
+    restart: unless-stopped
